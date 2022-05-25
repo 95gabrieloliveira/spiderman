@@ -1,11 +1,15 @@
 function handleMouseEnter(){
    this.classList.add('s-card--hovered')
 /* Função para reconhecer ao passar o mouse e abrir a imagem */
+document.body.id = `${this.id}-hovered`; 
+/* Trocar o fundo do background ao passar o mouse*/
 }
 
 function handleMouseLeave() {
     this.classList.remove('s-card--hovered');
     /* Função para sair ao passar o mouse e desfazer a ação acima */
+    document.body.id ='';
+    /* Mudar o ID ao sair do mouse */
 }
 
 function addEventListenersToCards () {
