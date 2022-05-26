@@ -1,0 +1,18 @@
+@import url(reset.css);
+
+.s-wrapper {
+    display: flex;
+    height: 100vh;
+    flex-flow: row nowrap;
+    background-color: blue;
+}
+
+.s-wrapper .s-left-column {
+    width: 100px;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
