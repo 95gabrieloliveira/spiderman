@@ -1,10 +1,12 @@
 @import url(reset.css);
+@import url(global.css);
+@import url(../css/components/components.css);
 
 .s-wrapper {
     display: flex;
     height: 100vh;
     flex-flow: row nowrap;
-    background-color: blue;
+    background-color: aqua;
 }
 
 .s-wrapper .s-left-column {
