@@ -24,3 +24,19 @@ function addEventListenersToCards () {
 }
 
 document.addEventListener("DOMContentLoaded",addEventListenersToCards, false);
+
+/* Função para rotacionar as imagens como carrosel */
+function selectCarouselItem(selectedButtonElement) {
+    const selectedItem = selectedButtonElement.id;
+    const carousel = document.querySelector('.s-cards-carousel');
+    const transform = carousel.style.transform;
+    const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i); /* Expressões regulares */
+    const rotateYDeg = -120 * (Number(selectedItem) - 1); /* Valor negativo para rodar sentido anti-horário */
+    const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYDeg}deg)`);
+  
+    carousel.style.transform = newTransform;
+  
+    const activeButtonElement = document.querySelector('.s-controller__button--active');
+    activeButtonElement.classList.remove('s-controller__button--active');
+    selectedButtonElement.classList.add('s-controller__button--active');
+  }
